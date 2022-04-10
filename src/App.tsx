@@ -1,7 +1,8 @@
+/// <reference types="styled-jsx" />
+
 import React from 'react';
 import ErrorTest from './components/error-test';
-import ErrorTest2 from './components/error-test2';
-import ErrorBoundary from './components/error-boundary';
+import Modal from './components/modal';
 import './App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <h1>I am the home page</h1>
         <ErrorTest />
+        <Modal />
     </div>
   );
 }
