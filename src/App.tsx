@@ -10,7 +10,10 @@ function App() {
     <div className="App">
       <h1>I am the home page</h1>
         <ErrorTest />
-        <Modal />
+        <Modal>
+          <h2>哈哈哈哈</h2>
+          <h2>嘻嘻嘻嘻</h2>
+        </Modal>
     </div>
   );
 }
