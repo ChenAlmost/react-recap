@@ -33,11 +33,8 @@ const Modal: React.FC<ModalProps> = (props: ModalProps) => {
                 }
                 .modal-body {
                   position: fixed;
-                  right: 50%;
-                  /* left: 0; */
-                  /* top: 50%; */
-                  /* bottom: 0; */
-                  width: 100px;
+                  left: 50%;
+                  transform: translateX(-50%);
                   background: #fff;
                   z-index: 1000;
             `}</style>
