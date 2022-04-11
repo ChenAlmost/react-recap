@@ -1,16 +1,42 @@
 import React from 'react';
-import ErrorTest from './components/error-test';
-import ErrorTest2 from './components/error-test2';
-import ErrorBoundary from './components/error-boundary';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { Home } from './pages/home';
+import { About } from './pages/about';
+import { Users } from './pages/users';
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>I am the home page</h1>
-        <ErrorTest />
-    </div>
-  );
+    return (
+        <div>
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to='/'>Home</Link>
+                        </li>
+                        <li>
+                            <Link to='/user'>User</Link>
+                        </li>
+                        <li>
+                            <Link to='/about'>About</Link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <Switch>
+                <Route path='/about'>
+                    <About />
+                </Route>
+                <Route path='/user'>
+                    <Users />
+                </Route>
+                <Route path='/'>
+                    <Home />
+                </Route>
+            </Switch>
+        </div>
+    );
 }
 
 export default App;
